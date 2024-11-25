@@ -1,0 +1,35 @@
+[project]
+name = "be6502emu"
+version = "0.1.0"
+description = "Emulator created for the Ben Eater's 6502 computer specifically"
+authors = [
+    {name = "Voyager", email = "voyager-2021@outlook.com"},
+]
+dependencies = [
+    "numpy>=2.1.3",
+    "dearpygui>=2.0.0",
+    "psutil>=6.1.0",
+    "rich>=13.9.4",
+]
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+be6502emu = "be6502emu.emulator:main"
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+package-dir = "src"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+    "twine>=5.1.1",
+    "pip>=24.3.1",
+    "pdm>=2.21.0",
+]
