@@ -163,3 +163,9 @@ cython_debug/
 
 # MacOS
 .DS_Store
+
+# Custom
+.vgconf
+configure.exe
+configure.py
+icon.ico
