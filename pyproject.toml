@@ -29,7 +29,32 @@ package-dir = "src"
 [dependency-groups]
 dev = [
     "pytest>=8.3.3",
-    "twine>=5.1.1",
     "pip>=24.3.1",
     "pdm>=2.21.0",
+    "tox>=4.23.2",
+    "flake8>=7.1.1",
+    "mypy>=1.13.0",
 ]
+
+[flake8]
+max-line-length = 160
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = [
+    "tests",
+]
+
+[tool.mypy]
+mypy_path = "src"
+check_untyped_defs = true
+disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
