@@ -1,4 +1,4 @@
-from src.be6502emu.mpu import MPU
+from be6502emu.mpu import MPU
 import pytest
 
 
