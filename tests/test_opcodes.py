@@ -16,7 +16,7 @@ def test_brk_clears_decimal_flag():
     assert 0 == mpu.p & mpu.DECIMAL
 
 
-@pytest.mark.skip("Not implemented yet")
+@pytest.mark.xfail
 def test_lda_zp_ind_loads_a_sets_n_flag():
     mpu = MPU()
     mpu.a = 0x00
@@ -33,7 +33,7 @@ def test_lda_zp_ind_loads_a_sets_n_flag():
     assert 0 == mpu.p & mpu.ZERO
 
 
-@pytest.mark.skip("Not implemented yet")
+@pytest.mark.xfail
 def test_lda_zp_ind_loads_a_sets_z_flag():
     mpu = MPU()
     mpu.a = 0x00
@@ -72,3 +72,16 @@ def test_lda_immediate_loads_a_sets_z_flag():
     assert 0x00 == mpu.a
     assert mpu.ZERO == mpu.p & mpu.ZERO
     assert 0 == mpu.p & mpu.NEGATIVE
+
+@pytest.mark.xfail
+def test_adc_bcd_off_immediate_carry_clear_in_accumulator_zeroes():
+    mpu = MPU()
+    mpu.a = 0
+    # $0000 ADC #$00
+    _write(mpu.memory, 0x0000, (0x69, 0x00))
+    mpu.step()
+    assert 0x0002, mpu.pc
+    assert 0x00 == mpu.a
+    assert 0 == mpu.p & mpu.CARRY
+    assert 0 == mpu.p & mpu.NEGATIVE
+    assert mpu.ZERO == mpu.p & mpu.ZERO

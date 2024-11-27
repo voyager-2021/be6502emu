@@ -609,3 +609,13 @@ class MPU:
     def inst_0xa9(self):
         self.opLDA(self.ProgramCounter)
         self.pc += 1
+    
+    @instruction(name="LDA", mode="zpg", cycles=3)
+    def inst_0xa5(self):
+        self.opLDA(self.ZeroPageAddr)
+        self.pc += 1
+
+    @instruction(name="ADC", mode="imm", cycles=2)
+    def inst_0x69(self):
+        self.opADC(self.ProgramCounter)
+        self.pc += 1
