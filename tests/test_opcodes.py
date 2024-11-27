@@ -73,6 +73,7 @@ def test_lda_immediate_loads_a_sets_z_flag():
     assert mpu.ZERO == mpu.p & mpu.ZERO
     assert 0 == mpu.p & mpu.NEGATIVE
 
+
 @pytest.mark.xfail
 def test_adc_bcd_off_immediate_carry_clear_in_accumulator_zeroes():
     mpu = MPU()
