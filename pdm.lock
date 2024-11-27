@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:09b6dc048aaa4b12a8c44587b7a2b076c4d756a04672fd91020f656f1bfa6b29"
+content_hash = "sha256:3c54b66141103afe63ca612d496a865f80535019d48e42ac3cf6e0095f63e643"
 
 [[metadata.targets]]
 requires_python = ">=3.10,<3.13"
@@ -598,6 +598,16 @@ files = [
     {file = "psutil-6.1.0-cp37-abi3-win32.whl", hash = "sha256:1ad45a1f5d0b608253b11508f80940985d1d0c8f6111b5cb637533a0e6ddc13e"},
     {file = "psutil-6.1.0-cp37-abi3-win_amd64.whl", hash = "sha256:a8fb3752b491d246034fa4d279ff076501588ce8cbcdbb62c32fd7a377d996be"},
     {file = "psutil-6.1.0.tar.gz", hash = "sha256:353815f59a7f64cdaca1c0307ee13558a0512f6db064e92fe833784f08539c7a"},
+]
+
+[[package]]
+name = "py65"
+version = "1.2.0"
+summary = "6502 microprocessor simulation package"
+groups = ["dev"]
+files = [
+    {file = "py65-1.2.0-py2.py3-none-any.whl", hash = "sha256:8e51f149647f2c2b44e5eb54350057771ccaef97f5f3d593fa3737e44c1ce4b7"},
+    {file = "py65-1.2.tar.gz", hash = "sha256:e1cb213823fc6ea8aecb219939943144b09439e5c14b3406cb5ca825d5875b93"},
 ]
 
 [[package]]
