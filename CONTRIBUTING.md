@@ -1,7 +1,7 @@
 
 # Contributing to be6502emu
 
-Welcome to the ~~best~~ mid as f project ever! 🎉
+Welcome to the ~~best~~ i meant mid af project ever! 🎉
 
 Please follow these guidelines carefully to ensure a smooth collaboration.
 
@@ -61,4 +61,4 @@ Please follow these guidelines carefully to ensure a smooth collaboration.
 - **Dependencies**: Avoid introducing unnecessary dependencies.
 - **Pull Request Reviews**: Be open to feedback and ready to make adjustments based on reviewer comments.
 
-Thank you for helping improve **be6502emu**!
+Thank you for helping to improve **be6502emu**!
