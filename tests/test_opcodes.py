@@ -8,7 +8,7 @@ def _write(memory, start_address, bytes):  # NOQA
     # fmt: on
 
 
-def test_brk_preserves_decimal_flag_when_it_is_set():
+def test_brk_clears_decimal_flag_when_it_is_set():
     mpu = MPU()
     mpu.p = mpu.DECIMAL
     # $C000 BRK
@@ -16,7 +16,7 @@ def test_brk_preserves_decimal_flag_when_it_is_set():
     mpu.pc = 0xC000
     mpu.step()
     assert mpu.BREAK == mpu.p & mpu.BREAK
-    assert mpu.DECIMAL == mpu.p & mpu.DECIMAL
+    assert 0 == mpu.p & mpu.DECIMAL
 
 
 def test_lda_zp_loads_a_sets_n_flag():
